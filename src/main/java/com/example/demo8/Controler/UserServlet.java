@@ -62,6 +62,7 @@ public class UserServlet extends HttpServlet {
         if (password!=confirmPassword){
             System.out.println("mật khẩu sai ");
         }else {
+
             String gender=request.getParameter("gender");
             String birthdateString=request.getParameter("birthdate");
             int phoneNumber= Integer.parseInt(request.getParameter("phoneNumber"));

@@ -76,6 +76,7 @@ public class Login extends HttpServlet {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
+
             userDao.addUser(new User(fullName,userName, password, gender, birthdate, phoneNumber));
             System.out.println("MK đúng ");
             //  request.getRequestDispatcher("index.jsp").forward(request, response); //-vị trí sau khi tạo thành công mình sẽ chuyển tới đâu

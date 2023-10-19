@@ -56,7 +56,9 @@ public class Login extends HttpServlet {
     }
 
     public static void addUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        String fullName = request.getParameter("fullName");
         String userName = request.getParameter("userName");
+
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
         System.out.println(password);
@@ -69,12 +71,12 @@ public class Login extends HttpServlet {
             System.out.println(userName + password + gender + birthdateString + phoneNumber);
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date birthdate = null;
-//            try {
-//                birthdate = sdf.parse(birthdateString);
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
-//            userDao.addUser(new User(userName, password, gender, birthdate, phoneNumber));
+            try {
+                birthdate = sdf.parse(birthdateString);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            userDao.addUser(new User(fullName,userName, password, gender, birthdate, phoneNumber));
             System.out.println("MK đúng ");
             //  request.getRequestDispatcher("index.jsp").forward(request, response); //-vị trí sau khi tạo thành công mình sẽ chuyển tới đâu
         } else {

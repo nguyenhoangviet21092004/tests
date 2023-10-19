@@ -55,6 +55,7 @@ public class UserServlet extends HttpServlet {
         request.getRequestDispatcher("LoginUpdate.jsp").forward(request, response);
     }
     public static void addUser(HttpServletRequest request,HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        String fullName=request.getParameter("fullName");
         String userName=request.getParameter("userName");
         String password=request.getParameter("password");
         String confirmPassword=request.getParameter("confirmPassword");
@@ -72,7 +73,7 @@ public class UserServlet extends HttpServlet {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            userDao.addUser(new User(userName,password,gender,birthdate,phoneNumber));
+            userDao.addUser(new User(fullName,userName,password,gender,birthdate,phoneNumber));
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }}
 }

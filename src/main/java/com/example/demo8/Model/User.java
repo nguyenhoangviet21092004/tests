@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class User {
     private int id;
+    private String fullName;
     private String userName;
     private String password;
 
@@ -12,13 +13,21 @@ public class User {
     private Date birthdate;
     private int phoneNumber;
 
-    public User(String userName, String password, String gender, Date birthdate, int phoneNumber) {
+    public User(String fullName, String userName, String password, String gender, Date birthdate, int phoneNumber) {
+        this.fullName = fullName;
         this.userName = userName;
         this.password = password;
-
         this.gender = gender;
         this.birthdate = birthdate;
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public int getId() {

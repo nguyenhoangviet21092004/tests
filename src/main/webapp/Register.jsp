@@ -61,26 +61,26 @@
 <div class="container">
     <h1>Quản Lý Tài Chính</h1>
     <form method="post" action="Login?action=addUser">
-        <label for="userName">Name:</label>
+        <label for="userName">Họ và tên:</label>
+        <input type="text" name="fullName" id="fullName" required>
+        <label for="userName">Tên đăng nhập:</label>
         <input type="text" name="userName" id="userName" required>
-
-        <label for="password">Password:</label>
-
+        <label for="password">Mật khẩu:</label>
         <input type="password" name="password" id="password" required>
-        <label for="password">Confirm Password:</label>
+        <label for="password">Xác nhận mật khẩu:</label>
         <input type="password" name="confirmPassword" id="confirmPassword" required>
 
-        <label for="gender">Gender:</label>
+        <label for="gender">Giới tính:</label>
         <select name="gender" id="gender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
+            <option value="Male">Nam</option>
+            <option value="Female">Nữ</option>
+            <option value="Other">Khác</option>
         </select>
 
-        <label for="birthdate">Birthdate:</label>
+        <label for="birthdate">Ngày tháng năm sinh :</label>
         <input type="date" name="birthdate" id="birthdate">
 
-        <label for="phoneNumber">Phone Number:</label>
+        <label for="phoneNumber">Số điện thoại:</label>
         <input type="text" name="phoneNumber" id="phoneNumber" required>
 
         <input type="submit" value="Submit">

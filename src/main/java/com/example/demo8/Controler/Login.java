@@ -72,6 +72,7 @@ public class Login extends HttpServlet {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date birthdate = null;
             try {
+
                 birthdate = sdf.parse(birthdateString);
             } catch (ParseException e) {
                 e.printStackTrace();

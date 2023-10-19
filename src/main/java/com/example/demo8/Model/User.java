@@ -13,6 +13,7 @@ public class User {
     private Date birthdate;
     private int phoneNumber;
 
+
     public User(String fullName, String userName, String password, String gender, Date birthdate, int phoneNumber) {
         this.fullName = fullName;
         this.userName = userName;

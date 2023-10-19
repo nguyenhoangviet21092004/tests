@@ -12,6 +12,7 @@ public class UserDao implements IUserDao{
                 String query="insert into users(fullName,userName,password,gender,birthdate,phoneNumber) values (?,?,?,?,?,?)";
 
 
+
         PreparedStatement preparedStatement = Connection.connection().prepareStatement(query);
         preparedStatement.setString(1,user.getFullName());
         preparedStatement.setString(2,user.getUserName());
